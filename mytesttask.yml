@@ -1,0 +1,17 @@
+platform: linux
+
+image_resouce:
+  type: docker-image
+  source:
+    repository: golang
+    tag: '1.8'
+
+run:
+  path: go/src/github.com/jwfriese/omgfruitapi/test.sh
+
+inputs:
+  - name: omgfruitapi-master
+    path: go/src/github.com/jwfriese/omgfruitapi
+
+output:
+  - name: new-release
